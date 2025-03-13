@@ -160,9 +160,9 @@ geom_bar(stat = "identity", fill = "skyblue") +  # Erstelle die Balken
 2. Create a scatter plot of Sales vs. Profit with a trend line.
 
 library(ggplot2)
-ggplot(Total_Sales_Profit, aes(x = Category)) +
-  geom_bar(aes(y = Total.Sales), stat = "identity", fill = "skyblue") +  
-  geom_smooth(aes(y = Total.Profit), method = "lm", color = "red", size = 1) +  
+ggplot(superstore, aes(x = Sales, y=Profit)) +
+  geom_point(aes(y = Profit, x=Sales), stat = "identity", fill = "skyblue") +  
+  geom_smooth(aes(y = Profit), method = "lm", color = "red", size = 1) +  
   labs(title = "Total Sales by Category with Trendline for Total Profit", 
        x = "Category", y = "Total Sales / Total Profit") +
   theme_minimal() +
